@@ -8,11 +8,18 @@ class ErrorScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: GestureDetector(
-            onTap: () {
-              GoRouter.of(context).pop();
-            },
-            child: Text(error)),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(error),
+            MaterialButton(
+              onPressed: () {
+                GoRouter.of(context).pop();
+              },
+              child: const Text('Ok'),
+            )
+          ],
+        ),
       ),
     );
   }

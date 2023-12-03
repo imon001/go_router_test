@@ -16,7 +16,10 @@ class Auth extends StatelessWidget {
         child: MaterialButton(
           color: Theme.of(context).colorScheme.primary,
           onPressed: () {
-            context.goNamed(MyRouterConstant.homeRouteName);
+            context.goNamed(
+              MyRouterConstant.homeRouteName,
+              pathParameters: {"id": "idNumber_1", "name": "imon"},
+            );
           },
           child: const Text('Authenticate'),
         ),

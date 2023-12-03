@@ -16,7 +16,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      routerConfig: myRouter,
+      routerConfig: AppRouter.returnRouter(true),
+      // routeInformationParser: AppRouter().myRouter.routeInformationParser,
+      // routerDelegate: AppRouter().myRouter.routerDelegate,
       title: 'Flutter Go_router Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
